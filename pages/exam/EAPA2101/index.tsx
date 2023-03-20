@@ -1,18 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Link from 'next/link'
 import supabase from '@/utils/supabase'
 import { GetStaticProps } from 'next'
 
-const inter = Inter({ subsets: ['latin'] })
-
 interface ExamProps {
-  exam: {id: string; title: string; description: string; video_url: string}[];
+    video: {id: string; title: string; tag: string; video_url: string}[];
 }
 
-export default function Home({ exam }: ExamProps) {
+export default function Home({ video }: ExamProps) {
   return (
     <>
       <Head>
@@ -22,20 +17,13 @@ export default function Home({ exam }: ExamProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-          <p className={styles.logo}>
-          ¿Need help studying for a GIS certification exam?
-          </p>
-          <h1>Prepare for<br/>GIS exam</h1>
-          <p className={styles.logo}>
-        Curated list of YouTube videos for your exam.
-        </p>
-        <br />
+          <h1>Videos for<br/>EAPA2101</h1>
         <div className={styles.grid}>
-          {exam.map((exam: {
+          {video.map((video: {
                 id: string;
                 title: string; 
                 video_url: string;}) => (
-                <div className={styles.card} key={exam.id}>{exam.title}</div>
+                <div className={styles.card} key={video.id}>{video.title}</div>
             ))}
         </div>
       </main>
@@ -44,11 +32,11 @@ export default function Home({ exam }: ExamProps) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { data: exam } = await supabase.from("exam").select("*")
+  const { data: video } = await supabase.from("video").select().or('tag.cs.{EAPA2101}');
   
   return {
       props: {
-        exam,
+        video,
       },
   };
 };

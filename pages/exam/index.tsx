@@ -22,14 +22,7 @@ export default function Home({ exam }: ExamProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-          <p className={styles.logo}>
-          ¿Need help studying for a GIS certification exam?
-          </p>
           <h1>Prepare for<br/>GIS exam</h1>
-          <p className={styles.logo}>
-        Curated list of YouTube videos for your exam.
-        </p>
-        <br />
         <div className={styles.grid}>
           {exam.map((exam: {
                 id: string;
