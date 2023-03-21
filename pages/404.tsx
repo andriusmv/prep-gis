@@ -6,12 +6,7 @@ export default function Custom404() {
         <main>
         <div className={styles.main}>
         <h3>Not ready yet 🏗️ 404 
-        <p><br/>... work in progress.<br/><br/>
-        Consider supporting this project at 
-        <br/><br/>
-        <Link href="https://www.buymeacoffee.com/pvdzpmpbqJ">
-        <span>BUY ME A COFFEE ☕</span></Link>
-        </p>
+        <p><br/>... work in progress.</p>
         </h3>
         </div>
         </main>

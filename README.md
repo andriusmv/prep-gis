@@ -1,38 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+GIS Preparation | Curated Videos to help you study for a GIS certification exam
 
-## Getting Started
+## About this project
 
-First, run the development server:
+On March 2023 I decided to take ESRI's ArcGIS Pro 2101 certification exam (EAPA2101). I got frustrated to find out that there where not many ressources online to study. I ended up drowning in random YouTube videos from people all around the world.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Once I passed the exam (on the second try), I promised myself to publish a free website where people could find an organized and curated list of YouTube videos that helped me pass the certification exam.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Two weeks later here it is, a curated list of publicly available videos that people can watch for free, so they can be prepared for their GIS certification exams.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This is a free-to-use project. Consider supporting me on the following link so I can keep on adding more content to available GIS certification exams:
+[Support this project - Buy me a coffee here](https://www.buymeacoffee.com/pvdzpmpbqJ)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+If you found a mistake or you think an important video is missing you can:
+- Add an issue here on the Github repo or
+- Send me an email at andresmorenovasquez@outlook.com
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can also contribute to the code base by opening a pull request.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Let me know about new features you would like to see in the website!
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+And... Good luck with your exam 📚

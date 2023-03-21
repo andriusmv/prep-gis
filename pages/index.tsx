@@ -46,7 +46,7 @@ export default function Home({ exam }: ExamProps) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { data: exam } = await supabase.from("exam").select("*")
+  const { data: exam } = await supabase.from("exam").select("*").order('title',  { ascending: true });
   
   return {
       props: {
