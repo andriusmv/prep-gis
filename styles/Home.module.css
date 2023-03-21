@@ -3,8 +3,67 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  padding: 1rem;
+  min-height: auto;
+  font-family: sans-serif;
+}
+
+.main h1 {
+  font-weight: 800;
+  font-size: 5.0rem;
+  line-height: 1.0;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 1.0rem;
+  margin-top: 1.0rem;
+  background-color: red;
+  background-image: linear-gradient(45deg, #332288, #AA4499);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+@media (max-width: 700px) {
+    .main h1 {
+      font-weight: 800;
+      font-size: 3.0rem;
+      line-height: 1.0;
+    }
+  }
+
+.main h2 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.main h3 {
+  font-weight: 300;
+  margin-bottom: 0.7rem;
+  color: #332288;
+  max-width: 300px;
+  text-align: center;
+
+}
+
+.main p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 1.0rem;
+  line-height: 1.0;
+  color: #AA4499
+}
+
+.main span {
+  color:#332288;
+  font-weight: 800;
+}
+
+.main footer {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 0;
 }
 
 .description {
@@ -46,11 +105,36 @@
   max-width: 100%;
 }
 
+.gridmenu {
+  display: flex;
+  width: var(--max-width);
+  max-width: 100%;
+}
+
+.gridmenu ul,
+.gridmenu li {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  margin: 1rem;
+  font-family: sans-serif;
+  font-weight: 200;
+  color: #332288;
+}
+
+.menuheader{
+  margin-bottom: 0;
+}
+
+.gridmenu :hover{
+  text-decoration-line: overline;
+}
 .card {
   padding: 1rem 1.2rem;
   border-radius: 8px;
-  background: rgb(196, 192, 192);
+  background: none;
   border: 1px solid black;
+  margin: 0.25rem;
 }
 
 .card span {
@@ -58,8 +142,16 @@
   transition: transform 200ms;
 }
 
+.card h1 {
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+}
 .card h2 {
   font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.card h3 {
+  font-weight: 300;
   margin-bottom: 0.7rem;
 }
 
@@ -153,8 +245,8 @@
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+    background: #aa44993e;
+    border: 1px solid #AA4499;
   }
 
   .card:hover span {
