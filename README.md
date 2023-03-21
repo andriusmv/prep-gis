@@ -20,3 +20,12 @@ You can also contribute to the code base by opening a pull request.
 Let me know about new features you would like to see in the website!
 
 And... Good luck with your exam 📚
+
+## Project Roadmap
+
+- Add nested routes for "/video" page so that users can watch each video without leaving the page. Imagine a sort of dashboard with video list and video player component.
+- Implement persistent Layouts with Remix to improve UX. Currently using Nextjs.
+
+Here is a snapshot of the current database (psql):
+
+![Postgresql schema](https://raw.githubusercontent.com/andriusmv/prep-gis/main/public/schema.PNG)
