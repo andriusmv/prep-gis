@@ -28,4 +28,4 @@ And... Good luck with your exam 📚
 
 Here is a snapshot of the current database (psql):
 
-![Postgresql schema](https://raw.githubusercontent.com/andriusmv/prep-gis/main/public/schema.PNG)
+![Postgresql schema](https://github.com/andriusmv/prep-gis/blob/main/public/schema.png)
