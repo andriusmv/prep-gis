@@ -35,9 +35,19 @@
   }
 
 .main h2 {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.7rem;
+  text-align: auto;
+  background-color: red;
+  background-image: linear-gradient(45deg, #332288, #AA4499);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
+
 .main h3 {
   font-weight: 300;
   margin-bottom: 0.7rem;
@@ -64,6 +74,24 @@
   padding: 0;
   margin: 0;
   padding-bottom: 0;
+}
+
+.mainvideo ul,
+.mainvideo li {
+  display: flex;
+  text-decoration: none;
+  list-style: lower-greek;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  font-family: sans-serif;
+  font-weight: 200;
+  color: #332288;
+}
+
+.mainvideo :hover{
+  text-decoration-line: underline;
+  background-color: #ddd2db;
 }
 
 .description {
@@ -129,6 +157,7 @@
 .gridmenu :hover{
   text-decoration-line: overline;
 }
+
 .card {
   padding: 1rem 1.2rem;
   border-radius: 8px;
@@ -366,4 +395,44 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.sidebar {
+  display: flex;
+  padding: none;
+  margin: 0;
+}
+
+.sidebar__sidebar {
+  width: 25%;
+  padding-left: 1rem;
+  position: sticky;
+  overflow: scroll;
+}
+
+.sidebar__main {
+  /* Take the remaining width */
+  flex: 1;
+  background-color: none;
+  padding: 1rem;
+  padding-top: none;
+  margin: 0;
+
+  /* Make it scrollable */
+  overflow: auto;
+}
+
+.videocontainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

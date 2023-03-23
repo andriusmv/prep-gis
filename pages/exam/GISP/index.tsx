@@ -8,25 +8,25 @@ interface ExamProps {
     video: {id: string; title: string; tag: string; video_url: string}[];
 }
 
-export default function Home({ video }: ExamProps) {
+export default function GISP({ video }: ExamProps) {
   return (
     <>
       <Head>
-        <title>ESRI EAPA2101 exam</title>
-        <meta name="description" content="ESRI EAPA2101 exam" />
+        <title>GISP GISCI exam</title>
+        <meta name="description" content="GISP GISCI exam" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
           <p>Currently showing curated videos for</p>
-          <h1>EAPA2101</h1>
+          <h1>GISP</h1>
           <h3>🔎 Simply click on the video of your choice</h3>
         <div className={styles.grid}>
           {video.map((video: {
                 id: string;
                 title: string; 
                 video_url: string;}) => (
-                <Link key={video.id} href={`/exam/EAPA2101/video#${video.id}`} className={styles.card}>{video.title}</Link>
+                <Link key={video.id} href={`/exam/GISP/video#${video.id}`} className={styles.card}>{video.title}</Link>
             ))}
         </div>
       </main>
@@ -35,7 +35,7 @@ export default function Home({ video }: ExamProps) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { data: video } = await supabase.from("video").select().or('tag.cs.{EAPA2101}');
+  const { data: video } = await supabase.from("video").select().or('tag.cs.{GISP}');
   
   return {
       props: {
