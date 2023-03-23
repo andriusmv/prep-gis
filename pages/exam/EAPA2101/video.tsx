@@ -12,7 +12,12 @@ export default function Video({ video }: ExamProps) {
     <>
       <div className={styles.sidebar}>
         <aside className={styles.sidebar__sidebar}>
-          <h3 className={styles.main}>🧛 Watch them all 👇📚</h3>
+          <div className={styles.main}>
+          <p className={styles.sidebar}>Esri ArcGIS Pro Associate</p>
+          <p className={styles.sidebar}><span>EAPA2101 exam</span></p>
+          <br />
+          <h3 className={styles.sidebar}>🧛 Watch them all 👇📚</h3>
+          </div>
         <ul className={styles.mainvideo}>
           {video.map((video: {
                 id: string;
@@ -31,7 +36,7 @@ export default function Video({ video }: ExamProps) {
                 embed: string;
                 video_url: string;}) => (
         <div key={video.id} className={styles.main} id={video.id}>
-            <h2 className={styles.main}>{video.title}</h2>
+            <h2 className={styles.sidebar}>{video.title}</h2>
       <div className={styles.videocontainer}>
           <iframe className={styles.video} src={`https://www.youtube.com/embed/${video.embed}`} width="500" height="281,25"/>
           </div>

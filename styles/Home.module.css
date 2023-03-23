@@ -422,6 +422,79 @@
   overflow: auto;
 }
 
+.sidebar h1 {
+  font-weight: 800;
+  font-size: 5.0rem;
+  line-height: 1.0;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 1.0rem;
+  margin-top: 1.0rem;
+  background-color: red;
+  background-image: linear-gradient(45deg, #332288, #AA4499);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+@media (max-width: 700px) {
+    .sidebar h1 {
+      font-weight: 800;
+      font-size: 3.0rem;
+      line-height: 1.0;
+    }
+  }
+
+.sidebar h2 {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.7rem;
+  text-align: auto;
+  background-color: red;
+  background-image: linear-gradient(45deg, #332288, #AA4499);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  border-width: 1px;
+  border-style: dashed;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar h3 {
+  font-weight: 300;
+  margin-bottom: 0.7rem;
+  color: #000000;
+  max-width: 300px;
+  text-align: center;
+  font-family: sans-serif;
+  border-width: 1px;
+  border-style: dashed;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 1.0rem;
+  line-height: 1.0;
+  color: #AA4499;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.sidebar span {
+  color:#332288;
+  font-weight: 800;
+}
+
 .videocontainer {
   position: relative;
   width: 100%;
