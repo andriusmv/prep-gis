@@ -18,8 +18,8 @@ export default function Video({ video }: ExamProps) {
                 id: string;
                 title: string; 
                 video_url: string;}) => (
-                <li>
-                <Link key={video.id} href={`/exam/EAPA2101/video#${video.id}`} className={styles.container}>{video.title}</Link>
+                <li key={video.id}>
+                <Link href={`/exam/EAPA2101/video#${video.id}`} className={styles.container}>{video.title}</Link>
                 </li>
                 ))}
         </ul>
@@ -30,7 +30,7 @@ export default function Video({ video }: ExamProps) {
                 title: string; 
                 embed: string;
                 video_url: string;}) => (
-        <div className={styles.main} key={video.id} id={video.id}>
+        <div key={video.id} className={styles.main} id={video.id}>
             <h2 className={styles.main}>{video.title}</h2>
       <div className={styles.videocontainer}>
           <iframe className={styles.video} src={`https://www.youtube.com/embed/${video.embed}`} width="500" height="281,25"/>
