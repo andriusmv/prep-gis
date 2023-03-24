@@ -1,10 +1,12 @@
 import styles from '@/styles/Home.module.css'
 import supabase from '@/utils/supabase'
+import { IconBrandYoutube } from '@tabler/icons-react';
 import { GetStaticProps } from 'next'
 import Link from 'next/link';
+import ReactPlayer from 'react-player/lazy';
 
 interface ExamProps {
-    video: {id: string; title: string; embed: string; video_url: string}[];
+    video: {id: string; title: string; embed: string; video_url: string; duration: string}[];
 }
 
 export default function Video({ video }: ExamProps) {
@@ -22,9 +24,12 @@ export default function Video({ video }: ExamProps) {
           {video.map((video: {
                 id: string;
                 title: string; 
-                video_url: string;}) => (
-                <li key={video.id}>
-                <Link href={`/exam/GISP/video#${video.id}`} className={styles.container}>{video.title}</Link>
+                video_url: string;
+                duration: string;}) => (
+                <li key={video.id} className={styles.sidebarmain}>
+                <Link href={`/exam/GISP/video#${video.id}`}>
+                {video.title}</Link>
+                {/* <p className={styles.sidebarmain}>{video.duration} <IconBrandYoutube color='red' size={15}/></p> */}
                 </li>
                 ))}
         </ul>
@@ -37,9 +42,10 @@ export default function Video({ video }: ExamProps) {
                 video_url: string;}) => (
         <div key={video.id} className={styles.main} id={video.id}>
             <h2 className={styles.sidebar}>{video.title}</h2>
-      <div className={styles.videocontainer}>
+          <ReactPlayer url={video.video_url} className={styles.videoyoutube} />
+      {/* <div className={styles.videocontainer}>
           <iframe className={styles.video} src={`https://www.youtube.com/embed/${video.embed}`} width="500" height="281,25"/>
-          </div>
+          </div> */}
           </div>
                 ))}
       </main>

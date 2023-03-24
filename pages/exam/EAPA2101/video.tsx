@@ -2,6 +2,7 @@ import styles from '@/styles/Home.module.css'
 import supabase from '@/utils/supabase'
 import { GetStaticProps } from 'next'
 import Link from 'next/link';
+import ReactPlayer from 'react-player/lazy';
 
 interface ExamProps {
     video: {id: string; title: string; embed: string; video_url: string}[];
@@ -37,9 +38,10 @@ export default function Video({ video }: ExamProps) {
                 video_url: string;}) => (
         <div key={video.id} className={styles.main} id={video.id}>
             <h2 className={styles.sidebar}>{video.title}</h2>
-      <div className={styles.videocontainer}>
+          <ReactPlayer url={video.video_url} className={styles.videoyoutube} />
+      {/* <div className={styles.videocontainer}>
           <iframe className={styles.video} src={`https://www.youtube.com/embed/${video.embed}`} width="500" height="281,25"/>
-          </div>
+          </div> */}
           </div>
                 ))}
       </main>

@@ -403,11 +403,31 @@
   margin: 0;
 }
 
+.sidebarmain {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  padding-bottom: 1rem;
+  font-family: sans-serif;
+}
+
+.sidebarmain p {
+  font-size: 10rem;
+}
+.sidebarmain li {
+  font-size: 10rem;
+}
+
+.sidebarcontent {
+  text-align: start;  
+}
+
 .sidebar__sidebar {
   width: 25%;
   padding-left: 1rem;
   position: sticky;
   overflow: scroll;
+  height: 90vh;
 }
 
 .sidebar__main {
