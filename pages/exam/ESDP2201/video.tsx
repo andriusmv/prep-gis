@@ -14,8 +14,8 @@ export default function Video({ video }: ExamProps) {
       <div className={styles.sidebar}>
         <aside className={styles.sidebar__sidebar}>
           <div className={styles.main}>
-          <p className={styles.sidebar}>Esri ArcGIS Pro Associate</p>
-          <p className={styles.sidebar}><span>EAPA2101 exam</span></p>
+          <p className={styles.sidebar}>Enterprise System Design Professional 2201</p>
+          <p className={styles.sidebar}><span>ESDP2201 exam</span></p>
           <br />
           <h3 className={styles.sidebar}>🧛 Watch them all 👇📚</h3>
           </div>
@@ -25,7 +25,7 @@ export default function Video({ video }: ExamProps) {
                 title: string; 
                 video_url: string;}) => (
                 <li key={video.id}>
-                <Link href={`/exam/EAPA2101/video#${video.id}`} className={styles.container}>{video.title}</Link>
+                <Link href={`/exam/ESDP2201/video#${video.id}`} className={styles.container}>{video.title}</Link>
                 </li>
                 ))}
         </ul>
@@ -51,7 +51,7 @@ export default function Video({ video }: ExamProps) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { data: video } = await supabase.from("video").select().or('tag.cs.{EAPA2101}');
+  const { data: video } = await supabase.from("video").select().or('tag.cs.{ESDP2201}');
   
   return {
       props: {
