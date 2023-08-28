@@ -8,11 +8,12 @@ import Link from 'next/link'
 export default function App({ Component, pageProps }: AppProps) {
   return (
   <>
-  <Head>
+  <head>
         <title>GIS Exam Study Prep</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/favicon.ico" />
-  </Head>
+        <Script async src="https://analytics.umami.is/script.js" data-website-id="05cbf974-086d-4993-9f35-81934e68197e" />
+  </head>
   <header className={styles.menuheader}>
     <ul className={styles.gridmenu}>
       <Link href="/"><li>🏠 Home</li></Link>
