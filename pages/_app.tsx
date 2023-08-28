@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>GIS Exam Study Prep</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/favicon.ico" />
+    <script async src="https://analytics.umami.is/script.js" data-website-id="05cbf974-086d-4993-9f35-81934e68197e"></script>
   </Head>
   <header className={styles.menuheader}>
     <ul className={styles.gridmenu}>
