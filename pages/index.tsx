@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 import supabase from '@/utils/supabase'
 import { GetStaticProps } from 'next'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function Home({ exam }: ExamProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+          <Script async src="https://analytics.umami.is/script.js" data-website-id="05cbf974-086d-4993-9f35-81934e68197e" />
       <main className={styles.main}>
           <p>
           ¿Need help studying for a GIS certification exam?
